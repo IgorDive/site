@@ -1,0 +1,165 @@
+@font-face {
+	font-family: 'Simple-Line-Icons';
+	src:url('../fonts/Simple-Line-Icons.eot');
+	src:url('../fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Simple-Line-Icons.woff') format('woff'),
+		url('../fonts/Simple-Line-Icons.ttf') format('truetype'),
+		url('../fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'titillium_weblight';
+    src: url('../fonts/titilliumweb-light-webfont.eot');
+    src: url('../fonts/titilliumweb-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/titilliumweb-light-webfont.woff2') format('woff2'),
+         url('../fonts/titilliumweb-light-webfont.woff') format('woff'),
+         url('../fonts/titilliumweb-light-webfont.ttf') format('truetype'),
+         url('../fonts/titilliumweb-light-webfont.svg#titillium_weblight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('../fonts/helvetica-webfont.eot');
+    src: url('../fonts/helvetica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica-webfont.woff') format('woff'),
+         url('../fonts/helvetica-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica-webfont.svg#helveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticabold';
+    src: url('../fonts/helvetica-bold-webfont.eot');
+    src: url('../fonts/helvetica-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica-bold-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica-bold-webfont.woff') format('woff'),
+         url('../fonts/helvetica-bold-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica-bold-webfont.svg#helveticabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'brushscriptmtitalic';
+    src: url('../fonts/brush-script-mt-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+body {
+	font-size: 10px;
+}
+
+.main-wrapper {
+	background-color: gray;
+	width: 1440px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.main-wrapper>header {
+	height: 780px;
+	background: url(../images/background1page-rightShadow.png) no-repeat right bottom, 
+				url(../images/background1page-leftRigtShadow.png) no-repeat center bottom, 
+				url(../images/background1page-leftShadow.png) no-repeat 0px 218px, 
+				url(../images/background1page-leftCenterShadow.png) no-repeat right bottom, 
+				radial-gradient(#0073BA, #0066A4);
+	text-align: center;
+}
+
+.logo-droopal {
+	font: 2.8rem brushscriptmtitalic;
+	padding-top: 205px;
+	color: white;
+	letter-spacing: 2px;
+}
+
+h1 {
+	font: small-caps 4.4rem helveticaregular;
+	color: white;
+	margin-top: 94px;
+	letter-spacing: 4px;
+}
+
+.logo-droopal~h3 {
+	font: small-caps 1.8rem helveticaregular;
+	color: white;
+	margin-top: -14px;
+	letter-spacing: 2px;
+}
+
+main {
+	font: 1.2rem helveticaregular;
+	color: white;
+	margin-top: 84px;
+	margin-bottom: 65px;
+}
+
+nav {
+	position: fixed;
+	width: 1440px;
+	
+	
+	top: 0px;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 112px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+li {
+	display: flex;
+	align-items: center;
+	font: small-caps 1.7rem helveticaregular;
+	color: white;
+	height: 54px;
+}
+
+li:first-child {
+	border-bottom: solid white 3px;
+}
+
+/*li.active {
+	border-bottom: solid white 3px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-button {
+	color: white;
+	font: 2.5rem Simple-Line-Icons; 
+	text-decoration: none;
+}
+
+.nav-button:hover {
+	color: white;
+	text-decoration: none;
+	text-shadow: 0 0 10px red;
+}
