@@ -16,7 +16,7 @@
 		<div class="main-wrapper">
 			<header>
 				<!-- <img src="logo.png" alt="" title="" width="" height=""> -->
-				<h2 class="logo-droopal">DrupalCube.com</h2>
+				<div class="logo-droopal">DrupalCube.com</div>
 				<h1>drupal-based web solutions</h1>
 				<h3>from intelligent, responsible and friendly developers</h3>
 				<main>
@@ -39,8 +39,8 @@
 			<section class="services">
 				<h2>services we provide</h2>
 				<div class="wrapper-of-services">
-					<article>
-						<img src="./images/shield.png" alt="shield" title="shield" width="57px" height="57px"> <!-- insert background under images -->
+					<article class="article-of-services">
+						<img src="./images/shield.png" alt="shield" title="shield"> <!-- insert background under images -->
 						<div>
 							<h3>support and maintenance</h3>
 							<p>
@@ -48,26 +48,8 @@
 							</p>
 						</div>
 					</article>
-					<article>
-						<img src="./images/graph.png" alt="graph" title="graph" width="58px" height="59px">
-						<div>
-							<h3>seo</h3>
-							<p>
-								We assist you with tech support and maintenance of your web project. Also we close security vulnerabilities, help you with hosting configuration, can speedup or “unfuck” your project.
-							</p>
-						</div>
-					</article>
-					<article>
-						<img src="./images/wrench.png" alt="wrench" title="wrench" width="57px" height="58px">
-						<div>
-							<h3>module development</h3>
-							<p>
-								It is critically important to make your website SEO-friendly, that’s why we can help you with SEO audit for you web site or can implement SEO tools for comfortable promotion.
-							</p>
-						</div>
-					</article>
-					<article>
-						<img src="./images/rocket.png" alt="rocket" title="rocket" width="55px" height="56px">
+					<article class="article-of-services">
+						<img src="./images/rocket.png" alt="graph" title="graph">
 						<div>
 							<h3>upgarde and migrate</h3>
 							<p>
@@ -75,17 +57,35 @@
 							</p>
 						</div>
 					</article>
-					<article>
-						<img src="./images/circularArrows.png" alt="circular arrows" title="circular arrows" width="57px" height="44px">
+					<article class="article-of-services">
+						<img src="./images/graph.png" alt="wrench" title="wrench">
 						<div>
-							<h3>integrationS</h3>
+							<h3>seo</h3>
+							<p>
+								We assist you with tech support and maintenance of your web project. Also we close security vulnerabilities, help you with hosting configuration, can speedup or “unfuck” your project.
+							</p>
+						</div>
+					</article>
+					<article class="article-of-services">
+						<img src="./images/circularArrows.png" alt="rocket" title="rocket">
+						<div>
+							<h3>integrations</h3>
 							<p>
 								We cover all popular “Drupal to Drupal” upgrade services (5 to 7, 5 to 8, 6 to 7, 6 to 8, 7 to 8) and “X to Drupal” migrate variants ( WP to Drupal, Custom to Drupal, Magento to Drupal, etc).
 							</p>
 						</div>
 					</article>
-					<article>
-						<img src="./images/layout.png" alt="layout" title="layout" width="50px" height="51px">
+					<article class="article-of-services">
+						<img src="./images/wrench.png" alt="circular arrows" title="circular arrows">
+						<div>
+							<h3>module development</h3>
+							<p>
+								It is critically important to make your website SEO-friendly, that’s why we can help you with SEO audit for you web site or can implement SEO tools for comfortable promotion.
+							</p>
+						</div>
+					</article>
+					<article class="article-of-services">
+						<img src="./images/layout.png" alt="layout" title="layout">
 						<div>
 							<h3>themes and layouts, design</h3>
 							<p>
@@ -99,8 +99,7 @@
 			<section class="solutions">
 				<h2>solutions we implement</h2>
 				<div class="wrapper-of-solutions">
-					<article>
-						<div class="background-of-article"></div> <!-- setup dimensions and background -->
+					<article class="article-of-solution">
 						<div class="solution-article">
 							<header>
 								<h3>
@@ -111,11 +110,11 @@
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin 
 								gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
 							</p>
 						</div>
 					</article>
-					<article>
-						<div class="background-of-article"></div>
+					<article class="article-of-solution">
 						<div class="solution-article">
 							<header>
 								<h3>
@@ -129,8 +128,7 @@
 							</p>
 						</div>
 					</article>
-					<article>
-						<div class="background-of-article"></div>
+					<article class="article-of-solution">
 						<div class="solution-article">
 							<header>
 								<h3>
@@ -141,15 +139,15 @@
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin 
 								gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.				
 							</p>
 						</div>
 					</article>
-					<article>
-						<div class="background-of-article"></div>
+					<article class="article-of-solution">
 						<div class="solution-article">
 							<header>
 								<h3>
-									CRM
+									crm
 								</h3>
 								<img src="./images/wifi.png">
 							</header>
@@ -159,12 +157,11 @@
 							</p>
 						</div>
 					</article>
-					<article>
-						<div class="background-of-article"></div>
+					<article class="article-of-solution">
 						<div class="solution-article">
 							<header>
 								<h3>
-									CMS
+									cms
 								</h3>
 								<img src="./images/net.png">
 							</header>
@@ -174,12 +171,11 @@
 							</p>
 						</div>
 					</article>
-					<article>
-						<div class="background-of-article"></div>
+					<article class="article-of-solution">
 						<div class="solution-article">
 							<header>
 								<h3>
-									DMS
+									dms
 								</h3>
 								<img src="./images/shelves.png">
 							</header>
