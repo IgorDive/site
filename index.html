@@ -395,28 +395,33 @@
 					</div>
 				</div>
 				<form action="" target="_blank" name="info" enctype="" method="GET">
-					<input type="text" name="name" placeholder="Your Name">
-					<input type="tel" name="tel" placeholder="Your Phone">
-					<input type="email" name="email" placeholder="Your Email">
-					<select name="selection">
-						<option selected disabled>Contact Minsk (HQ)</option>
-						<option value="1">smth</option>
-						<option value="2">smth</option>
-						<option value="3">smth</option>
-					</select>
-					<input type="checkbox" name="agreement" checked>
-					<textarea maxlength="100" placeholder="Your Message"></textarea>
-					<button type="submit">
+					<div class="wrapper-of-inputs">
+						<input type="text" name="name" placeholder="Your Name">
+						<input type="tel" name="tel" placeholder="Your Phone">
+						<input type="email" name="email" placeholder="Your Email">
+						<div class="select">
+							<select name="selection">
+								<option selected disabled>Contact Minsk (HQ)</option>
+								<option value="1">smth1</option>
+								<option value="2">smth2</option>
+								<option value="3">smth3</option>
+							</select>
+						</div>
+						<textarea maxlength="100" placeholder="Your Message"></textarea>
+					</div>
+					<input type="checkbox" name="agreement" id="checkbox" checked>
+					<label for="checkbox"> I do agree with Privacy Policy</label>
+					<div class="submit">
 						send
-					</button>
+					</div>
 				</form>
 			</section>
 			<footer>
 				<p>&#169; 2018 DrupalCube. All rights reserved.</p>
 				<div class="wrapper-of-social-icons">
-					<div class="social-icons">f</div>
-					<div class="social-icons">t</div>
-					<div class="social-icons">g</div>
+					<a href="" class="social-icons">f</a>
+					<a href="" class="social-icons">t</a>
+					<a href="" class="social-icons">g</a>
 				</div>
 				<a href="#header" class="nav-button">&#xe078;</a>			
 			</footer>
