@@ -165,6 +165,22 @@ h3 {
 
 
 
+.back-title {
+	font: 9.3rem helveticabold;
+	position: absolute;
+	color: rgba(180, 180, 180, 0.2);
+	text-shadow: 0px -10px 15px rgba(20, 20, 20, 0.1), 
+		0px 10px 15px rgba(220, 220, 220, 0.1);
+	left: 50%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+	letter-spacing: 10px;
+}
+
+
+
+
+
 .services {
 	width: 100%;
 	height: 740px;
@@ -176,9 +192,14 @@ h3 {
 	position: relative;
 }
 
+.services>.back-title {
+	top: 20px;
+}
+
 .services>h2 {
 	padding: 70px 10px 36px;
 	color: black;
+	position: relative;
 }
 
 .wrapper-of-services {
@@ -241,6 +262,15 @@ h3 {
 
 
 
+
+
+
+
+
+
+
+
+
 .solutions {
 	background: white url(../images/solutionBackground.png) no-repeat left top;
 	width: 100%;
@@ -248,11 +278,17 @@ h3 {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	position: relative;
+}
+
+.solutions>.back-title {
+	top: 48px;
 }
 
 .solutions>h2 {
 	color: white;
 	padding: 98px 10px 36px;
+	position: relative;
 }
 
 .wrapper-of-solutions {
@@ -317,11 +353,6 @@ h3 {
 
 }
 
-/*.wrapper-of-counter {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}*/
 
 .counter {
 	font:  4rem helveticaregular;
@@ -360,6 +391,17 @@ h3 {
 	filter: grayscale(0%);
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .portfolio {
 	display: flex;
 	flex-direction: column;
@@ -367,11 +409,17 @@ h3 {
 	align-items: center;
 	width: 100%;
 	background-color: white;
+	position: relative;
+}
+
+.portfolio>.back-title {
+	top: 52px;
 }
 
 .portfolio>h2 {
 	color: black;
 	padding: 106px 0px 103px 0px;
+	position: relative;
 }
 
 .wrapper-of-portfolio {
@@ -512,6 +560,11 @@ h3 {
 .team {
 	background: white url(../images/backgroundTeam.png) no-repeat left bottom;
 	padding: 0px 0px 96px 0px;
+	position: relative;
+}
+
+.team>.back-title {
+	top: 73px;
 }
 
 .team>h2 {
@@ -519,6 +572,7 @@ h3 {
 	color: white;
 	padding: 124px 0px 100px 0px;
 	margin: 0px;
+	position: relative;
 }
 
 .wrapper-of-team {
@@ -611,13 +665,14 @@ h3 {
 
 
 
-
-
-
-
 .contacts {
 	background-color: white;
 	padding: 0px 0px 60px 0px;
+	position: relative;
+}
+
+.contacts>.back-title {
+	top: 36px;
 }
 
 .contacts>h2 {
@@ -625,6 +680,7 @@ h3 {
 	color: black;
 	padding: 92px 0px;
 	margin: 0px;
+	position: relative;
 }
 
 .wrapper-of-address {
