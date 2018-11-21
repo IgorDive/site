@@ -11,10 +11,79 @@
 				let massOfTitles = document.querySelectorAll('.back-title');
 				let heightOfTitle = massOfTitles[0].clientHeight;
 				let heightH2 = document.querySelector('h2').clientHeight;
-				let ratioOfParallax = 0.71*heightH2 / screenHeight; 
+				let ratioOfParallax = 0.71*heightH2 / screenHeight;
+
+				let slider = document.querySelector('.slider-of-members');
+				let rootSlider = document.querySelector('.slider');
+				let wathWindow = document.querySelector('.slider-window-of-members');
+				let btnRight = document.querySelector('.slider-button-right');
+				let btnLeft = document.querySelector('.slider-button-left');
+				let turnMembers = (e) => {
+					
+					if (e.target.dataset.button === "left") {
+						if ( !parseFloat(getComputedStyle(slider).left) ) {
+							btnLeft.style.opacity = 0.3;
+							btnLeft.style.cursor = 'default';
+							return;
+						}
+						let scrLeft = parseFloat(getComputedStyle(slider).left) + wathWindow.clientWidth;
+						if (scrLeft > 0) { 
+							slider.style.left = '0px';
+							btnLeft.style.opacity = 0.3;
+							btnLeft.style.cursor = 'default';
+							return;
+						}
+						btnRight.style.opacity = 1;
+						btnRight.style.cursor = '';
+						slider.style.left = `${scrLeft}px`;
+					}
+
+					if (e.target.dataset.button === "right") {
+						if ( parseFloat(getComputedStyle(slider).left) === wathWindow.offsetWidth - slider.offsetWidth) {
+							btnRight.style.opacity = 0.3;
+							btnRight.style.cursor = 'default';
+							return;
+						}
+
+						let scrLeft = parseFloat(getComputedStyle(slider).left) - wathWindow.clientWidth;
+						if (scrLeft < wathWindow.offsetWidth - slider.offsetWidth) {
+							btnRight.style.opacity = 0.3;
+							btnRight.style.cursor = 'default';
+							slider.style.left = `${wathWindow.offsetWidth - slider.offsetWidth}px`;
+							return;
+						}
+						
+						btnLeft.style.opacity = 1;
+						btnLeft.style.cursor = '';
+						slider.style.left = `${scrLeft}px`;  
+					}
+				};
+
+				let arrOfWrapperOfMember = document.querySelectorAll('.slider-wrapper-of-member');
+				let assignWidthOfWrapperOfMember = () => {
+					let currHeightOfMember = 1.05 * arrOfWrapperOfMember[0].offsetHeight;
+
+					arrOfWrapperOfMember.forEach( w => w.style.width = `${currHeightOfMember}px` );
+				};
+
+				let addWChange = () => { slider.style.willChange = 'left' };
+				let removeWChange = () => { slider.style.willChange = 'auto' }; 
 
 				
 				window.addEventListener('scroll', changeStatusNav, false);
+
+				rootSlider.addEventListener('click', turnMembers, false);
+
+				window.addEventListener('resize', assignWidthOfWrapperOfMember, false);
+
+				btnLeft.addEventListener('mouseenter', addWChange, false);
+				btnRight.addEventListener('mouseenter', addWChange, false);
+				btnLeft.addEventListener('mouseleave', removeWChange, false);
+				btnRight.addEventListener('mouseleave', removeWChange, false);
+
+				assignWidthOfWrapperOfMember();
+				btnLeft.style.opacity = 0.3;
+				btnLeft.style.cursor = 'default';
 
 							
 				function changeStatusNav() {

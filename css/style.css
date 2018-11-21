@@ -574,86 +574,113 @@ h3 {
 	color: white;
 }
 
-.wrapper-of-team {
+.slider {
+	position: relative;
+	height: 0px;
+	padding-top: 20%;
+}
+
+.wrapper-of-slider {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
 }
 
-.button-left {
+.slider-button-left {
 	background: url(../images/arrowLeft.png) no-repeat center center;
-	width: 75px;
-	height: 150px;
+	width: 3%;
+	height: 48%;
 	align-self: flex-start;
-	margin: 30px 20px;
-}
-
-.button-left:hover {
-	background-color: rgba(255, 255, 255, 0.1);
+	padding: 2% 2%;
+	margin: 2% 2%;
 	cursor: pointer;
 }
 
-.button-left:active {
+.slider-button-left:hover {
+	background-color: rgba(200, 200, 200, 0.1);
+}
+
+.slider-button-left:active {
 	box-shadow: 0 0 20px black inset;
-	cursor: pointer;
 }
 
-.button-right {
+.slider-button-right {
 	background: url(../images/arrowRight.png) no-repeat center center;
-	width: 75px;
-	height: 150px;
+	width: 3%;
+	height: 48%;
 	align-self: flex-start;
-	margin: 30px 20px;
-}
-
-.button-right:hover {
-	background-color: rgba(255, 255, 255, 0.1);
+	padding: 2% 2%;
+	margin: 2% 2%;
 	cursor: pointer;
+	cursor: 
 }
 
-.button-right:active {
+.slider-button-right:hover {
+	background-color: rgba(200, 200, 200, 0.1);
+}
+
+.slider-button-right:active {
 	box-shadow: 0 0 20px black inset;
-	cursor: pointer;
 }
 
-.wrapper-of-members {
+.slider-window-of-members {
 	flex: 1 1 auto;
+	position: relative;
+	overflow: hidden;
+	will-change: background-size;
+}
+
+.slider-of-members {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
+	justify-content: center;
+	transform: translateZ(0);
+	transition: left 1.5s ease;
 }
 
-.photo-of-member {
-	width: 190px;
-	height: 190px;
-	margin: 0 auto;
-	border-radius: 50%;
-	background: url(../images/memberPhoto.png) no-repeat 50% 50%;
-	background-size: 140%;
-	transition: background-size 0.2s ease;
-}
-
-.photo-of-member:hover {
-	background-size: 150%;
-}
-
-.wrapper-of-member {
+.slider-wrapper-of-member {
 	text-align: center;
 	color: white;
 }
 
-.wrapper-of-member h3 {
-	margin: 34px 0px 0px 0px;
+.slider-photo-of-member {
+	width: 62%;
+	height: 62%;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: url(../images/memberPhoto.png) no-repeat 50% 50%;
+	background-size: 140%;
+	transition: background-size 0.3s ease;
 }
 
-.wrapper-of-member p {
+.slider-photo-of-member:hover {
+	background-size: 150%;
+}
+
+
+
+.slider-wrapper-of-member h3 {
+	margin: 14% 0px 0px 0px;
+}
+
+.slider-wrapper-of-member p {
 	font: 1rem helveticaregular;
-	margin: 4px 0px; 
+	margin: 1% 0px; 
 
 }
+
+
+
+
 
 
 
