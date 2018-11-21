@@ -5,6 +5,15 @@
 				let topBorderSolutions = document.getElementById('solutions').offsetTop;
 				let topBorderPortfolio = document.getElementById('portfolio').offsetTop;
 				let topBorderContacts = document.getElementById('contacts').offsetTop;
+				let topBorderWrapOfCounters = document.querySelector('.wrapper-of-counters').offsetTop;
+				let heightOfWrapOfCounters = document.querySelector('.wrapper-of-counters').offsetHeight;
+				let valueOfCounters = [11, 83, 100, 82, 15, 60];
+				let arrOfCounters = document.querySelectorAll('.counter');
+				let arrOfCountersSpan = document.querySelectorAll('.counter>span');
+				let currentValues = [0, 0, 0, 0, 0, 0];
+				let growthRatio = 0.05;
+				let key;
+				let counter = 0;
 
 				let topBorderTeam = document.getElementById('team').offsetTop;
 				let screenHeight = document.documentElement.clientHeight;
@@ -18,6 +27,16 @@
 				let wathWindow = document.querySelector('.slider-window-of-members');
 				let btnRight = document.querySelector('.slider-button-right');
 				let btnLeft = document.querySelector('.slider-button-left');
+				let renderCounters = () => {
+					if (currentValues[2] === valueOfCounters[2]) return window.clearInterval(key);
+
+					currentValues.forEach( (v, i, arr) => {
+						arr[i] = v + growthRatio * valueOfCounters[i];
+					});
+
+					arrOfCountersSpan.forEach( (c, i) => c.innerHTML = `${Math.round(currentValues[i])}` );	
+				};
+
 				let turnMembers = (e) => {
 					
 					if (e.target.dataset.button === "left") {
@@ -87,6 +106,7 @@
 
 							
 				function changeStatusNav() {
+
 					if (window.scrollY >= topBorderServices - screenHeight) {
 							massOfTitles[0].style.top = `${(window.scrollY - topBorderServices + screenHeight) * ratioOfParallax - 0.8*heightOfTitle}px`;
 						};
@@ -102,6 +122,16 @@
 					if (window.scrollY >= topBorderContacts - screenHeight) {
 						massOfTitles[4].style.top = `${(window.scrollY - topBorderContacts + screenHeight) * ratioOfParallax - 0.8*heightOfTitle}px`;
 					};
+
+
+					if ( window.scrollY + screenHeight >= topBorderSolutions + topBorderWrapOfCounters + heightOfWrapOfCounters ) {
+						if (!counter) {
+							key =  window.setInterval(renderCounters, 50);
+							arrOfCounters.forEach( c => c.classList.add('isVisible') );
+							counter = 1;
+						};
+					};
+
 
 
 
