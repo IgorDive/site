@@ -61,7 +61,7 @@
 
 				let arrOfWrapperOfMember = document.querySelectorAll('.slider-wrapper-of-member');
 				let assignWidthOfWrapperOfMember = () => {
-					let currHeightOfMember = 1.05 * arrOfWrapperOfMember[0].offsetHeight;
+					let currHeightOfMember = 0.874 * arrOfWrapperOfMember[0].offsetHeight;
 
 					arrOfWrapperOfMember.forEach( w => w.style.width = `${currHeightOfMember}px` );
 				};

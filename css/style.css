@@ -561,7 +561,7 @@ h3 {
 
 .team {
 	background: white url(../images/backgroundTeam.png) no-repeat left bottom;
-	padding: 0px 0px 116px 0px;
+	padding: 0px 0px 58px 0px;
 	position: relative;
 	z-index: 1;
 }
@@ -577,7 +577,7 @@ h3 {
 .slider {
 	position: relative;
 	height: 0px;
-	padding-top: 20%;
+	padding-top: 24%;
 }
 
 .wrapper-of-slider {
@@ -597,7 +597,7 @@ h3 {
 	height: 48%;
 	align-self: flex-start;
 	padding: 2% 2%;
-	margin: 2% 2%;
+	margin: 1% 2%;
 	cursor: pointer;
 }
 
@@ -615,9 +615,8 @@ h3 {
 	height: 48%;
 	align-self: flex-start;
 	padding: 2% 2%;
-	margin: 2% 2%;
+	margin: 1% 2%;
 	cursor: pointer;
-	cursor: 
 }
 
 .slider-button-right:hover {
@@ -653,8 +652,8 @@ h3 {
 }
 
 .slider-photo-of-member {
-	width: 62%;
-	height: 62%;
+	width: 60%;
+	height: 52%;
 	margin: 0 auto;
 	border-radius: 50%;
 	background: url(../images/memberPhoto.png) no-repeat 50% 50%;
