@@ -28,6 +28,7 @@
 	let wathWindow = document.querySelector('.slider-window-of-members');
 	let btnRight = document.querySelector('.slider-button-right');
 	let btnLeft = document.querySelector('.slider-button-left');
+	let currentX = 0;
 	let renderCounters = () => {
 		if (currentValues[2] === valueOfCounters[2]) return window.clearInterval(key);
 
@@ -39,43 +40,37 @@
 	};
 
 	let turnMembers = (e) => {
-		
 		if (e.target.dataset.button === "left") {
-			if ( !parseFloat(getComputedStyle(slider).left) ) {
+			let scrLeft = currentX + wathWindow.clientWidth;
+			
+			if (scrLeft >= 0) { 
 				btnLeft.style.opacity = 0.3;
 				btnLeft.style.cursor = 'default';
-				return;
-			}
-			let scrLeft = parseFloat(getComputedStyle(slider).left) + wathWindow.clientWidth;
-			if (scrLeft > 0) { 
-				slider.style.left = '0px';
-				btnLeft.style.opacity = 0.3;
-				btnLeft.style.cursor = 'default';
+				slider.style.transform = `translate3d(0px, 0px, 0px)`;
+				currentX = 0;
 				return;
 			}
 			btnRight.style.opacity = 1;
 			btnRight.style.cursor = '';
-			slider.style.left = `${scrLeft}px`;
+			currentX = scrLeft;
+			slider.style.transform = `translate3d(${scrLeft}px, 0px, 0px)`;
 		}
 
 		if (e.target.dataset.button === "right") {
-			if ( parseFloat(getComputedStyle(slider).left) === wathWindow.offsetWidth - slider.offsetWidth) {
+			let scrLeft = currentX - wathWindow.clientWidth;
+			
+			if (scrLeft <= wathWindow.offsetWidth - slider.offsetWidth) {
 				btnRight.style.opacity = 0.3;
 				btnRight.style.cursor = 'default';
-				return;
-			}
-
-			let scrLeft = parseFloat(getComputedStyle(slider).left) - wathWindow.clientWidth;
-			if (scrLeft < wathWindow.offsetWidth - slider.offsetWidth) {
-				btnRight.style.opacity = 0.3;
-				btnRight.style.cursor = 'default';
-				slider.style.left = `${wathWindow.offsetWidth - slider.offsetWidth}px`;
+				slider.style.transform = `translate3d(${wathWindow.offsetWidth - slider.offsetWidth}px, 0px, 0px)`;
+				currentX = wathWindow.offsetWidth - slider.offsetWidth;
 				return;
 			}
 			
 			btnLeft.style.opacity = 1;
 			btnLeft.style.cursor = '';
-			slider.style.left = `${scrLeft}px`;  
+			currentX = scrLeft;
+			slider.style.transform = `translate3d(${scrLeft}px, 0px, 0px)`;  
 		}
 	};
 
@@ -86,7 +81,7 @@
 		arrOfWrapperOfMember.forEach( w => w.style.width = `${currHeightOfMember}px` );
 	};
 
-	let addWChange = () => { slider.style.willChange = 'left' };
+	let addWChange = () => { slider.style.willChange = 'transform' };
 	let removeWChange = () => { slider.style.willChange = 'auto' }; 
 
 	
