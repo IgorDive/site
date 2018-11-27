@@ -8,6 +8,7 @@
 	let topBorderContacts = document.getElementById('contacts').offsetTop;
 	let topBorderWrapOfCounters = document.querySelector('.wrapper-of-counters').offsetTop;
 	let heightOfWrapOfCounters = document.querySelector('.wrapper-of-counters').offsetHeight;
+	let nav = document.getElementById('nav');
 	let valueOfCounters = [11, 83, 100, 82, 15, 60];
 	let arrOfCounters = document.querySelectorAll('.counter');
 	let arrOfCountersSpan = document.querySelectorAll('.counter>span');
@@ -77,8 +78,13 @@
 	let arrOfWrapperOfMember = document.querySelectorAll('.slider-wrapper-of-member');
 	let assignWidthOfWrapperOfMember = () => {
 		let currHeightOfMember = 0.874 * arrOfWrapperOfMember[0].offsetHeight;
+		let currentWithNav = document.getElementById('header').offsetWidth;
 
-		arrOfWrapperOfMember.forEach( w => w.style.width = `${currHeightOfMember}px` );
+		nav.style.width = `${currentWithNav}px`;
+		arrOfWrapperOfMember.forEach( w => {
+			w.style.width = `${currHeightOfMember}px`;
+			w.style.fontSize = `${0.1*currHeightOfMember}px`;
+		});
 	};
 
 	let addWChange = () => { slider.style.willChange = 'transform' };
