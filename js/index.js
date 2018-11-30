@@ -85,6 +85,7 @@
 			w.style.width = `${currHeightOfMember}px`;
 			w.style.fontSize = `${0.1*currHeightOfMember}px`;
 		});
+		changeStatusNav();
 	};
 
 	let addWChange = () => { slider.style.willChange = 'transform' };
@@ -103,6 +104,7 @@
 	btnRight.addEventListener('mouseleave', removeWChange, false);
 
 	assignWidthOfWrapperOfMember();
+	changeStatusNav();
 	btnLeft.style.opacity = 0.3;
 	btnLeft.style.cursor = 'default';
 
